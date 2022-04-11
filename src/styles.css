@@ -25,3 +25,8 @@ body{
   background-position: center center;
   font-family:'Rubik Bubbles', cursive;
 }
+footer{
+    color: white;
+    margin-top: 98%;
+    margin-left: 4%;
+}
