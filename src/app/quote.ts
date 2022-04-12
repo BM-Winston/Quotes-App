@@ -9,3 +9,4 @@ export class Quote {
         this.upvote = upvote;
         this.downvote = downvote;
 }
+}
