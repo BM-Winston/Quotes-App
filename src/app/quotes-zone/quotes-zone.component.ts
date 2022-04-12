@@ -8,6 +8,12 @@ import { Quote } from '../quote';
 })
 export class QuotesZoneComponent implements OnInit {
 
+  quotes: Quote[] =[
+    new Quote{'1'}
+  ]
+
+  
+
   constructor() { }
 
   ngOnInit(): void {
