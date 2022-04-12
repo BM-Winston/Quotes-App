@@ -1,3 +1,3 @@
 export class Quote {
-    constructor(id:number){}
+    constructor(id: number, quote:string, upvote:number, downvote:number){}
 }
