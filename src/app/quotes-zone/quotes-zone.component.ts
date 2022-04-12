@@ -9,7 +9,10 @@ import { Quote } from '../quote';
 export class QuotesZoneComponent implements OnInit {
 
   quotes: Quote[] =[
-    new Quote{'1'}
+    new Quote(1,'first quote', 0, 0),
+    new Quote(2,'second quote', 0, 0),
+    new Quote(3,'third quote', 0, 0),
+    new Quote(4,'fourth quote', 0, 0)
   ]
 
   
