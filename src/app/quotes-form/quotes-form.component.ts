@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { FormsModule } from "@angular/forms";
+// import {  } from "module";
+import { QuoteClass } from "src/app/quote-class";
 
 @Component({
   selector: 'app-quotes-form',
@@ -6,6 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quotes-form.component.css']
 })
 export class QuotesFormComponent implements OnInit {
+  @Output() addquote=new EventEmitter<QuoteClass>();
+  quotes!: QuoteClass;
+
+  getquote(){
+    this.addquote.emit(this.quotes)
+     console.log('winston');
+    this.quotes=new QuoteClass("","", "", 0, 0, new Date());
+   
+  }
 
   constructor() { }
 
