@@ -1,27 +1,41 @@
 <div class="container-fluid">
     <h2 class="text-center">Create Quote</h2>
     <hr>
-    <form class="quote-form" (ngSubmit)="getquote()" #quotesform="ngForm">
+    <form class="quote-form"  #quotesform="ngForm">
         <div class="form-group">
 
             <label for="name">Creator</label>
-            <input type="text" required class="form-control" id="name" >
+            <input type="text" #name required class="form-control" id="name" >
 
         </div>
         <div class="form-group">
 
             <label for="description">Input Quote</label>
-            <textarea class="form-control" id="description" rows="4" required ></textarea>
+            <textarea class="form-control" #description id="description" rows="4" required ></textarea>
 
         </div>
         <div class="form-group">
             <label for="complete">Author</label>
-            <input type="text" required class="form-control" id="name" >
+            <input type="text" #author required class="form-control" id="name" >
             <hr>
-            <button type="submit" class="btn btn-success">Add Quote</button>
+            <button type="submit" (click)="getQuote(name.value, description.value, author.value)" class="btn btn-success">Add Quote</button>
 
             
 
         </div>
     </form>
 </div>
+
+<!-- <div class="row">
+    <div class="col-md-6">
+        <div *ngFor="let quote of quotes">
+            <p>{{quote.creator}}</p>
+            <p>{{quote.quote}}</p>
+            <p>{{quote.Author}}</p>
+
+        </div>
+    </div>
+    <div class="col-md-6">
+        <app-quotes-form (addquote)="addquotes($event)"></app-quotes-form>
+    </div>
+</div> -->

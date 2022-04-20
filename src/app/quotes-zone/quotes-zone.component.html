@@ -5,14 +5,16 @@
 </ul> -->
 <div class="row">
     <div class="col-md-6">
-    <ul *ngFor='let quote of quotes let i=index'>
+    <ul *ngFor='let quote of quotes ; let i=index'>
 
-        <li>{{quote.quote}} <span class="upvote" (click)='upvotes(i)'>upvote{{quote.upvote}}</span> <span
-                class="downvote ml-4" (click)='downvote(i)'>downvote{{quote.downvote}}</span> </li>
+    
+    <li> {{quote.quote}} <br> By {{quote.Author}} <br> <span class="upvote" (click)='upvotes(i)'>upvote {{quote.upvote}}</span> <span
+                class="downvote ml-4" (click)='downvote(i)'>downvote {{quote.downvote}}</span> </li>
+    Created by {{quote.creator}}
     
     </ul>
     </div>
     <div class="col-md-6">
-        <app-quotes-form></app-quotes-form>
+        <app-quotes-form (addquote)="addquotes($event)"></app-quotes-form>
     </div>
 </div>
